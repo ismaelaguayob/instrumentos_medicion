@@ -1,0 +1,326 @@
+---
+title: "Reporte estadístico: validación de escala de uso de dispositivos para ocio y socialización en adultos mayores"
+author: Ismael Aguayo y Catalina Soza
+format:
+  html: 
+    toc: true
+    toc-location: left
+    toc-depth: 3
+    toc-title: "Índice"
+    number-sections: true
+    theme:
+      light: cosmo
+      dark: darkly
+    code-link: true
+    title-block-banner: true
+    smooth-scroll: true
+editor: visual
+execute: 
+  echo: true
+  warning: false
+comments:
+  hypothesis: 
+    theme: classic
+    openSidebar: false
+lang: es
+---
+
+## Configuramos la sesión
+```{r}
+install.packages("pacman")
+library(pacman)
+pacman::p_load(dplyr, haven, psych, table1, flextable, labelled, forcats, here) # Descargamos los paquetes
+
+options(scipen = 999) # Desactivar notación científica
+rm(list = ls()) # Limpiar el entorno de trabajo
+```
+
+## Cargamos los datos
+```{r}
+
+datos <- haven::read_dta(here::here("input", "TendenciaECV20072022publica.dta"))
+
+```
+
+## Preprocesamos los datos
+```{r}
+
+# Filtros a la base de datos original. Seleccionamos variables de interés y año (2022)
+datos_proc <- datos |> 
+    select(AÑO, SEXO, EDAD, EDUCACION, starts_with("TECNOLOGIA1"), starts_with("TECNOLOGIA2"), TECNOLOGIA7_1, TECNOLOGIA7_2, starts_with("LUBBEN"), starts_with("ALONE"), starts_with("DEPRESS"), -TECNOLOGIA2_4, -TECNOLOGIA2_8, -TECNOLOGIA2_9) |> 
+    filter(AÑO == 2022)
+
+variables_categoricas <- c("SEXO", "EDUCACION", "TECNOLOGIA1", "TECNOLOGIA2_1", "TECNOLOGIA2_3", "TECNOLOGIA2_5", "TECNOLOGIA2_6", "TECNOLOGIA2_7", "TECNOLOGIA2_10", "TECNOLOGIA2_11", "TECNOLOGIA2_12", "TECNOLOGIA2_13", "TECNOLOGIA2_14", "TECNOLOGIA2_16", "TECNOLOGIA2_15", "TECNOLOGIA7_1", "TECNOLOGIA7_2", "LUBBENALTO_", "ALONE_", "ALONE2_", "ALONE1_", "DEPRESSED_")
+
+# Transformamos las variables categóricas a factor para realizar descriptivos adecuados
+
+datos_proc <- datos_proc |> 
+  mutate(TECNOLOGIA1 = na_if(TECNOLOGIA1, 5)) |>
+  mutate(across(c(TECNOLOGIA7_1, TECNOLOGIA7_2), ~ na_if(., 3))) |> 
+  mutate(across(all_of(variables_categoricas), haven::as_factor)) |> 
+  mutate(across(all_of(variables_categoricas), droplevels))
+
+# Codificamos etiquetas de las variables 
+
+var_label(datos_proc) <- list(
+  SEXO = "Sexo del entrevistado",
+  EDUCACION = "Nivel educacional",
+  TECNOLOGIA1 = "Tenencia de smartphone",
+  LUBBENALTO_ = "Aislamiento social",
+  ALONE_ = "Soledad autopercibida",
+  DEPRESSED_ = "Riesgo de depresión",
+  TECNOLOGIA2_1 = "Hablar con otra persona",
+  TECNOLOGIA2_3 = "Comunicarse por mensajes o chat",
+  TECNOLOGIA2_5 = "Sacar fotos o videos",
+  TECNOLOGIA2_6 = "Jugar en el celular",
+  TECNOLOGIA2_7 = "Leer libros, diarios o revistas",
+  TECNOLOGIA2_10= "Escuchar música",
+  TECNOLOGIA2_11 = "Ver videos, películas o series",
+  TECNOLOGIA2_12 = "Comunicarse por videollamada",
+  TECNOLOGIA2_13 = "Usar Facebook",
+  TECNOLOGIA2_14 = "Usar Instagram",
+  TECNOLOGIA2_15 = "Usar otras redes sociales",
+  TECNOLOGIA2_16 = "Usar Twitter",
+  TECNOLOGIA7_1 = "Uso de Zoom, Meet o Skype",
+  TECNOLOGIA7_2 = "Aprender algo a través de internet"
+)
+
+# Codificamos etiquetas de las categorías que no venían previamente con la base
+
+datos_proc <- datos_proc |> 
+  mutate(
+    # Ejemplo para cambiar una variable específica
+    LUBBENALTO_ = fct_recode(LUBBENALTO_,
+      "Bajo o nulo riesgo de aislamiento social" = "0",
+      "Alto riesgo de aislamiento social" = "1"
+    ),
+    
+    DEPRESSED_ = fct_recode(DEPRESSED_,
+      "Sin sospecha de depresión" = "0",
+      "Sospecha de síntomas depresivos" = "1"
+    )
+  )
+
+```
+
+Escala Depresión Yesavage
+
+ESCALA UCLA DE SOLEDAD ABREVIADA
+3 ITEMS
+Escala UCLA abreviada y validada (Hughes et al.,
+2004), que consta de 3 ítems. Es la escala más utilizada
+para la evaluación global del sentimiento de soledad.
+Se ha encontrado que las puntuaciones en la escala de
+soledad predicen una amplia variedad de variables
+relacionadas con la salud mental, como la depresión
+y física como la mortalidad. No tiene distribución
+normal, por lo que se dicotomiza usando el punto
+de corte de con/sin soledad (Perissinotto et al., 2019).
+ESCALA DE RED SOCIAL DE LUBBEN
+ABREVIADA (LSNS-6)
+Lubben Social Network Scale. Es una escala de decla-
+ración de aislamiento social, con 3 ítems referidos a
+familiares y 3 ítems de amigos de tipo Likert (Lubben
+& Gironda, 2003). La escala tiene un rango de 0 a 30,
+donde 30 puntos indican la ausencia de aislamiento
+social, 12 puntos o más, indica un bajo riesgo de
+aislamiento social y menos de 12 puntos indica un
+alto riesgo de aislamiento social.
+
+## Resultados descriptivos
+
+### Descriptivos de la muestra
+
+```{r}
+table1(~ SEXO + EDAD + EDUCACION + TECNOLOGIA1 + LUBBENALTO_ + ALONE_ + DEPRESSED_, data = datos_proc, caption = "Descriptivos generales de la muestra", footnote = "Elaboración propia con datos de la ECVV 2022")
+
+```
+
+Con respecto a las características de la muestra, el promedio de edad es de 71.2 años (DE = 8.03), y hay una mayor presencia de mujeres (66.9%). Los niveles educacionales más comunes son Básica o preparatoria completa o incompleta (38.4%) y Humanidades o educación media completa o incompleta (37.3%). Al rededor de la mitad de los adultos mayores encuestados reportan tener un teléfono inteligente, y un cuarto de estos un celular convencional. Sobre las variables dependientes del estudio, más de la mitad de la muestra presenta un alto riesgo de aislamiento social, se autopercibe con un nivel considerable de soledad, y aproximadamente un tercio de los individuos presenta síntomas depresivos.  
+
+```{r}
+
+items_seleccionados <- datos_proc |> 
+  select(TECNOLOGIA2_1, TECNOLOGIA2_3, 
+         TECNOLOGIA2_5, TECNOLOGIA2_6, TECNOLOGIA2_7, TECNOLOGIA2_10, TECNOLOGIA2_11, TECNOLOGIA2_12, 
+         TECNOLOGIA2_13, TECNOLOGIA2_14, TECNOLOGIA2_16, TECNOLOGIA2_15, 
+         TECNOLOGIA7_1, TECNOLOGIA7_2)
+
+# 2. Ahora aplicamos la función sobre ese objeto
+table1(~.,data=items_seleccionados, caption = '"Ha utilizado el celular para..."')
+
+```
+
+Sobre las variables que componen el índice uso de dispositivos digitales para ocio y socialización, el uso más reportado por los individuos es para hablar con otra persona (89.8%), seguido de comunicarse por mensajes o chat en plataformas como Whatsapp (57.3%) y comunicarse por videollamada (49.2%). Facebook es la red social que más utilizan los adultos mayores que componen la muestra (40.8%), con una gran diferencia con la segunda más utilziada que es Instagram (16.1%). Dos de las variables consideradas no se reducen al uso a través del celular, y presentan una menor frecuencia que las demás: Uso de Zoom, Meet o Skype (11.6%) y Aprender algo a través de internet (20.2%).
+
+## Matriz de correlaciones
+
+```{r}
+vars_indice <- c("TECNOLOGIA2_1", "TECNOLOGIA2_3", "TECNOLOGIA2_5", 
+                 "TECNOLOGIA2_6", "TECNOLOGIA2_7", "TECNOLOGIA2_10", 
+                 "TECNOLOGIA2_11", "TECNOLOGIA2_12", "TECNOLOGIA2_13", 
+                 "TECNOLOGIA2_14", "TECNOLOGIA2_16", "TECNOLOGIA2_15", 
+                 "TECNOLOGIA7_1", "TECNOLOGIA7_2")
+
+tech_data <- datos |>
+  filter(AÑO == 2022) |> 
+  select(TECNOLOGIA2_1, TECNOLOGIA2_3, 
+         TECNOLOGIA2_5, TECNOLOGIA2_6, TECNOLOGIA2_7, TECNOLOGIA2_10, TECNOLOGIA2_11, TECNOLOGIA2_12, 
+         TECNOLOGIA2_13, TECNOLOGIA2_14, TECNOLOGIA2_16, TECNOLOGIA2_15, 
+         TECNOLOGIA7_1, TECNOLOGIA7_2) |>
+  mutate(across(c(TECNOLOGIA7_1, TECNOLOGIA7_2), ~ na_if(., 3))) |>
+  mutate(across(all_of(vars_indice), ~ 3 - .))
+
+```
+
+```{r}
+matCor <- tetrachoric(tech_data)
+
+corrplot(matCor$rho, method = "number", type = "lower")
+
+stargazer(matCor$rho, title="Correlaciones", type="html")
+
+```
+
+Como primer paso del análisis, se estimó una matriz de correlaciones tetracórica, debido a la naturaleza dicotómica de todas las variables que componen la batería de uso de dispositivos digitales en la ENCVV 2022. Todas las correlaciones son positivas, y varían entre moderadas y altas entre los diferentes ítems. El rango de las magnitudes varía entre 0.4 y 0.89, siendo la menor correlación registrada la correspondiente a los ítems "Utilizar el celular para hablar con otras personas" y "Utilizar el celular para ver videos, películas o series".
+
+## Análisis Factorial Exploratorio
+
+```{r}
+KMO(matCor$rho)
+
+cortest.bartlett(matCor$rho, n = 1789)
+```
+
+Para analizar si un Análisis Factorial Exploratorio (AFE) es plausible en la muestra, se realizaron dos análisis: el test de KMO y el test de esfericidad de Barlett. El valor KMO de la matriz de correlaciones es "merecedora" (>0.8), lo cual indica que probablemente los datos sean adecuados para conducir un AFE, coincidente con el resultado significativo del test de esfericidad de Barlett ($\chi^2$=29098; p<0.001).
+
+```{r}
+scree.plot(tech_data)
+fa.parallel(matCor$rho, n.obs=1789, fa="fa")
+
+```
+
+En un paso siguiente, se conducieron dos análisis para determinar la cantidad de factores óptimos para estimar el AFE. Primero, el análisis del gráfico de sedimentación indica que podrían estimarse uno o dos factores, ya que la recta se vuelve horizontal desde los tres factores. La observación del análisis paralelo de Horn sugiere algo similar, los dos primeros factores se hayan por encima de la recta simulada, mientras que el tercero está ligeramente arriba, lo cual permite su estimación. Debido a esto, se realizará el AFE con dos factores, acorde a la operacionalización realizada anteriormente. Si los resultados de este no muestran un sustento teórico relevante o el ajuste es muy pobre (observando las cargas factoriales y los indicadores relevantes), se utilizará un modelo unidimensional o uno tridimensional.
+
+Los modelos serán estimados utilizando matrices de correlación tetracóricas, que es lo adecuado debido al nivel de medición de los ítems. Se utilizará la rotación oblimín, ya que permite la correlación entre factores y el estimador PA, debido a que no asume normalidad multivariada.
+
+```{r}
+
+modelo_2f <- fa(
+  r = tech_data, 
+  nfactors = 2, 
+  rotate = "oblimin",
+  fm = "pa", 
+  cor = "tet"
+)
+
+modelo_2f
+
+print(modelo_2f$loadings, cutoff = 0.3, sort = TRUE)
+
+```
+
+Analizando las cargas factoriales, se observa una estructura muy similar a la proyectada en la operacionalización realizada. Por el lado del primer factor, se agrupan los items relacionados a la socialización, cómo la interacción en redes sociales o la comunicación directa a través de mensajes o las videollamadas. En el segundo factor, se agrupan actividades vinculadas con el ocio y el entretenimiento, que pueden ser desarrolladas en solitario, cómo leer libros, escuchar música o ver películas o series. Llamativamente, la variable de videollamadas a través de Zoom o Meet fue identificada como parte de este factor, tal vez por que los encuestados asocian más estas plataformas a tareas educativas o inforativas que estrictamente a la comunicación con sus redes. Dos variables tuvieron cargas cruzadas de magnitud no ignorable (<0.3): jugar juegos en el celular y sacar fotos o videos en el celular. Debido a su carácter ambigüo, se decidió descartarlas de la construcción de los índices y del modelo final.
+
+```{r}
+tech_data <- tech_data |> select(-TECNOLOGIA2_6, -TECNOLOGIA2_5)
+modelo_2f <- fa(
+  r = tech_data, 
+  nfactors = 2, 
+  rotate = "oblimin",
+  fm = "pa", 
+  cor = "tet"
+)
+
+modelo_2f
+```
+
+El ajuste global del modelo fue aceptable. El indicador RSMR fue de 0.05, lo cual señala un buen ajuste de la estructura residual. Las cargas factoriales presentaron una buena magnitud, entre 0.7 y 0.99 en la dimensión de socialización y entre 0.64 y 0.87 en la dimensión de ocio y entretenimiento, y la varianza explicada por el modelo es del 71%. Ambas dimensiones tienen una alta correlación, de 0.78, lo cual sugiere que ambas dimensiones, aunque distinguibles, están fuertemente relacionadas en los sujetos. 
+
+## Análisis de confiabilidad
+
+```{r}
+
+socializacion <- tech_data |> select(TECNOLOGIA2_1, TECNOLOGIA2_3, TECNOLOGIA2_12, TECNOLOGIA2_13, TECNOLOGIA2_14, TECNOLOGIA2_16, TECNOLOGIA2_15)
+
+ocio <- tech_data |> select(TECNOLOGIA2_7, TECNOLOGIA2_10, TECNOLOGIA2_11, TECNOLOGIA7_1, TECNOLOGIA7_2)
+
+omega_social <- psych::omega(socializacion, 1, "pa", poly = TRUE)
+
+omega_ocio <- psych::omega(ocio, 1, "pa", poly = TRUE)
+
+omega_social$omega.tot
+
+```
+
+La consistencia interna de cada subescala se estimó de forma independiente mediante el Alfa Ordinal y el coeficiente Omega de McDonald, debido al nivel de medida dicotómico de los ítems. Los resultados indicaron niveles de fiabilidad excelentes para ambas dimensiones. El factor de Socialización obtuvo un alpha ordinal de 0.95 y un coeficiente omega de McDonald de 0.95, mientras que el factor de Ocio y Entretenimiento presentó un alpha ordinal de 0.91 y un coeficiente omega de McDonald de 0.91. Ambas escalas presentan una alta consistencia interna, con una buena relación entre sus mediciones y los ítems que las componen.
+
+## Construcción del índice
+
+```{r}
+
+items_social <- c("TECNOLOGIA2_1", "TECNOLOGIA2_3", "TECNOLOGIA2_12", 
+                  "TECNOLOGIA2_13", "TECNOLOGIA2_14", "TECNOLOGIA2_16", 
+                  "TECNOLOGIA2_15")
+
+items_ocio <- c("TECNOLOGIA2_7", "TECNOLOGIA2_10", "TECNOLOGIA2_11", 
+                "TECNOLOGIA7_1", "TECNOLOGIA7_2")
+
+vars_indice <- c("TECNOLOGIA2_1", "TECNOLOGIA2_3", "TECNOLOGIA2_7", "TECNOLOGIA2_10", 
+                 "TECNOLOGIA2_11", "TECNOLOGIA2_12", "TECNOLOGIA2_13", 
+                 "TECNOLOGIA2_14", "TECNOLOGIA2_16", "TECNOLOGIA2_15", 
+                 "TECNOLOGIA7_1", "TECNOLOGIA7_2")
+
+datos_biv <- datos |>
+    select(AÑO, SEXO, EDAD, EDUCACION, starts_with("TECNOLOGIA1"), starts_with("TECNOLOGIA2"), TECNOLOGIA7_1, TECNOLOGIA7_2, starts_with("LUBBEN"), starts_with("ALONE"), starts_with("DEPRESS"), -TECNOLOGIA2_4, -TECNOLOGIA2_8, -TECNOLOGIA2_9) |> 
+    filter(AÑO == 2022)
+
+datos_biv <- datos_biv |> 
+  mutate(TECNOLOGIA1 = na_if(TECNOLOGIA1, 5)) |>
+  mutate(across(c(TECNOLOGIA7_1, TECNOLOGIA7_2), ~ na_if(., 3))) |>
+  mutate(across(all_of(vars_indice), ~ 3 - .)) |> 
+  mutate(socializacion = rowMeans(pick(all_of(items_social)), na.rm = TRUE)) |> 
+  mutate(ocio = rowMeans(pick(all_of(items_ocio)), na.rm = TRUE)) |> 
+  mutate(SEXO = as_factor(SEXO))
+
+```
+
+Ante los resultados positivos en términos de confiabilidad y validez para ambas subescalas en en AFE, el alpha ordinal y el coeficiente de omega, se procede a construir los índices para ambas dimensiones. Estos son creados mediante un promedio de todas las variables de cada factor, utilizando pairwise como método de manejo de casos perdidos para mantener la mayor cantidad de casos. Cabe destacar que todas las variables debieron ser invertidas para estimar los análisis y construir el índice para facilitar la interpretación de los resultados, ya que en cada ítem un menor resultado significaba un menor uso de tecnología. 
+
+```{r}
+
+table1(~ socializacion + ocio | SEXO, data = datos_biv, caption="Descriptivos índices por sexo", footnote = "Elaboración propia con datos de la ENCVV 2022")
+
+```
+
+Ambos índices tienen un rango de 1 a 2, donde 1 significa que no utilizan los dispositivos tecnológicos para ninguna de las tareas consultadas y 2 para todas. En el caso del índice de socialización, la media es de 1.39 (D.E. = 0.268), y en el del índice de ocio de 1.21 (D.E. = 1.21). En ambos índices las mujeres muestran un mejor rendimiento, con un puntaje promedio mayor de 0.06 en el factor de socialización y de 0.03 en el factor de ocio que sus contrapartes masculinas.
+
+## Análisis bivariado
+
+```{r}
+
+var_label(datos_biv) <- list(socializacion = "Índice de uso de TIC para socialización",
+ocio = "Índice de uso de TIC para ocio y entretenimiento",
+   ALONE1_ = "Escala de soledad UCLA",
+   LUBBENR1_ = "Escala de aislamiento de Lubben",
+   DEPRESSIVE1_ = "Escala de depresión Yesavage"
+)
+
+model_alone <- lm(ALONE1_ ~ socializacion + ocio + SEXO + EDUCACION + EDAD, data = datos_biv)
+
+model_lubben <- lm(LUBBENR1_ ~ socializacion + ocio + SEXO + EDUCACION + EDAD, data = datos_biv)
+
+model_depresion <- lm(DEPRESSIVE1_ ~ socializacion + ocio + SEXO + EDUCACION + EDAD, data = datos_biv)
+
+sjPlot::tab_model(model_alone, model_lubben, model_depresion)
+```
+
+Para estimar los análisis bivariados y probar las hipótesis de los estudios, se realizaron una serie de modelos de regresión lineal con el método de Mínimos Cuadrados Ordinarios. En todos los modelos, se agregaron ambos índices simultáneamente, sumado a el sexo, la edad y el nivel educativo de los encuestados como variables de control. 
+
+El primer modelo, que tenía como variable dependiente la soledad autopercibida medida a través de una escala UCLA simplificada, no mostró efectos significativos para los factores. Sin embargo, el nivel de estudios si presenta un efecto significativo (p<0.001) y negativo en la soledad: El aumento de un nivel educaciónal significa una reducción de 0.19 en la escala de soledad. El sexo tambien mostró un efecto en la soledad (p<0.01), siendo el efecto de ser mujer un aumento de 0.23 en la escala de soledad.
+
+El segundo modelo si muestra efectos significativos para ambos factores (p<0.01). Sobre la dimensión de socialización, la diferencia entre los sujetos que no utilizan los dispositivos para estas actividades y los que sí lo hacen es de 3.45 puntos en la escala de aislamiento de Lubben. El efecto del ocio es algo menor, teniendo un efecto de 1.97 el utilizar dispositivos digitales para el entretenimiento. El R² indica que el modelo está explicando un 9% de la varianza de la variable dependiente.
+
+Con respecto al tercer modelo, solo la dimensión de socialización muestra un efecto significativo (p<0.001): el efecto de utilizar dispositivos digitales para socializar es negativo, reduciendo en -0.79 el puntaje en la escala de depresión de Yesavage. El R² señala que el modelo está explicando un 8.2% de la varianza de la escala de depresión.
+
+En síntesis, el uso de tecnologías digitales para el ocio y la socialización parece tener un efecto en diversos indicadores del bienestar en la vejez, controlando por el sexo, la edad y el nivel educacional. Al observar los resultados de los modelos, la socialización demostró ser más relevante para explicar una reducción del riesgo de aislamiento y la depresión, mientras que no se encontraron resultados significativos para ninguna de las dimensiones en la soledad.
