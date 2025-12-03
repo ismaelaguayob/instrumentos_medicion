@@ -1,5 +1,5 @@
 ---
-title: "Reporte estadístico: validación de escala de uso de dispositivos para ocio y socialización en adultos mayores"
+title: "Operacionalización y validación de escala de uso de dispositivos para ocio y socialización en adultos mayores"
 author: Ismael Aguayo y Catalina Soza
 format:
   html: 
@@ -8,6 +8,7 @@ format:
     toc-depth: 3
     toc-title: "Índice"
     number-sections: true
+    number-depth: 4
     theme:
       light: cosmo
       dark: darkly
@@ -25,7 +26,141 @@ comments:
 lang: es
 ---
 
-## Configuramos la sesión
+## Introducción
+
+El envejecimiento de la población es un cambio demográfico que está sucediendo en todo el mundo. Se caracteriza porque hay cada vez más personas mayores, y la esperanza de vida es más alta (Organización Mundial de la Salud, 2025). Chile, por su parte, también refleja esta tendencia global, presentando un marcado y acelerado proceso de envejecimiento. Los datos del Censo 2024 (Instituto Nacional de Estadística, 2025) indican que el porcentaje de personas de 65 años o más alcanzó el 14%, en contraste con el 6,6% en 1992, elevando el Índice de Envejecimiento a 79 personas mayores por cada 100 menores de 15 años.
+
+Por otro lado, las Tecnologías de la Información y Comunicación (TIC) son cruciales en el mundo contemporáneo, impactando áreas tan diversas como la educación, el trabajo, la comunicación y la vida cotidiana (Castells, 1997; Van Dijk, 2020b). No obstante, la transformación digital no se ha distribuido de manera equitativa para la población (Van Dijk, 2020a). Esta desigualdad puede entenderse a través del concepto de *digital divide*, entendida como un fenómeno multifacético que refleja las desigualdades en el acceso, uso y aprovechamiento de las TIC entre distintos grupos sociales. Esta brecha es más aguda en adultos mayores (Mubarak y Suomi, 2022, Barrenda et al. 2024), los cuales han tenido profundas desventajas en habilidades, tipos de uso y resultados asociados al uso de TIC, desarrollándose el concepto de *grey digital divide* para su caso particular.
+
+Esto es especialmente relevante, ya que la literatura revela los posibles beneficios que tiene el uso de TICs en la población envejecida. Entre ellos, se encuentran la reducción de sintomatología depresiva e ideación suicida y el aumento de la satisfacción con la vida (Jun y Kim, 2017; Lifshitz et al., 2018; Wang et al., 2019). Sumado a esto, el uso de las TIC favorece la conectividad social (Forsman y Nordmyr, 2017; Szabo et al., 2019), el acceso a los recursos comunitarios (Forsman y Nordmyr, 2017) y la participación e inclusión social (Forsman y Nordmyr, 2017; Ihm y Hsieh, 2015). Además, las TIC en la actualidad son clave para la socialización, ya que permiten la conexión ininterrumpida con otras personas, trascendiendo las barreras geográficas y culturales y ofreciendo nuevas oportunidades para la conexión social (Kaye, 2021; Rosell et al., 2024). Específicamente, para usos sociales y motivados por el ocio, la utilización de herramientas digitales en la vejez tiene un impacto especialmente significativo en la salud mental de los adultos mayores, por sobre otros tipos de uso informacionales e instrumentales (Szabo et al., 2019; Sims et al., 2017).
+
+En el contexto nacional, el uso de internet y dispositivos digitales está aumentando exponencialmente en personas mayores, por lo que las brechas de acceso están disminuyendo. Según la Sexta Encuesta Nacional de Calidad de Vida en la Vejez 2022 (ENCVV), un 89% de los encuestados reportaron tener celular para uso propio, aumentando casi en 40 % desde el 2019. Sumado a esto, el estudio de la undécima Encuesta sobre acceso, usos y usuarios de Internet en Chile (Subsecretaría de Telecomunicaciones y CADEM, 2024) reportó que un 82,9 % de los adultos mayores tiene acceso propio y pagado a Internet en el hogar.
+
+Sin embargo, la brecha digital ya no responde a la simple tenencia o no de una conexión wifi, o de un celular inteligente. En la actualidad, la forma de uso que se le da a los dispositivos digitales impacta en los resultados que se puede tener en la vida (Van Dijk, 2020a), y, como se referenció anteriormente, en componentes cruciales de la salud mental de los adultos mayores.
+
+## Ocio y socialización digital vs. usos instrumentales de las TIC
+
+En este estudio, se entenderán ocio y socialización digital cómo el conjunto de prácticas y actividades, mediadas por tecnologías y dispositivos digitales (como smartphones, computadores o tablets), que los adultos mayores realizan con el propósito principal de obtener gratificación personal, entretenimiento, descanso y para mantener o expandir sus redes de interacción social.
+
+Se decide realizar una medición específica del ocio y la socialización digital, excluyendo deliberadamente otros indicadores de uso, por dos razones teóricas y empíricas concatenadas.
+
+Primero, la literatura especializada distingue los tipos de uso de Internet según su motivación subyacente. Por un lado, existen usos instrumentales o utilitarios, que están orientados a la consecución de tareas y metas externas (ej. realizar trámites bancarios, compras, buscar información de salud). Por otro lado, existen usos socioemocionales y de ocio, cuyo propósito es intrínseco y está vinculado directamente a la gratificación personal, el entretenimiento y la regulación de las relaciones sociales (Stafford et al., 2004).
+
+Segundo, la evidencia empírica sugiere que estos distintos tipos de uso impactan de manera diferenciada en el bienestar de las personas mayores. Mientras los usos instrumentales pueden mejorar la autonomía, son los usos sociales y de ocio los que demuestran una relación más directa y robusta con los indicadores de bienestar psicológico. Por ejemplo, Sims et al. (2017) encuentra que, en adultos de 80 años y más, el uso de Internet para propósitos sociales se asociaba con una mayor satisfacción vital, mientras que el uso para fines informacionales no presentaba un efecto significativo sobre esta. De forma similar, el estudio longitudinal de Szabo et al. (2019) concluyó que el uso social de Internet impactaba positivamente en el bienestar al reducir la soledad, relación que no se encontró para los usos instrumentales o informacionales.
+
+Por lo tanto, al centrar este estudio en el ocio y la socialización, se busca capturar las prácticas digitales que están más directa e intrínsecamente ligadas a la regulación socioemocional y al bienestar psicológico de la población mayor, lo cual es central para nuestras hipótesis de trabajo. Para motivos de este estudio, se entenderá por adultos mayores a personas de más de 60 años, según lo establecido en la legislación actual chilena (ley N°19.828).
+
+## Mediciones de ocio y socialización digital en la vejez
+
+El ocio y socialización digital en la vejez se ha medido de mútiples formas y en distintos contextos y estudios, sin embargo, típicamente de forma independiente.
+
+Para medir el ocio digital, Rosell y Vergés (2021), crearon y aplicaron una encuesta, en la cual, cuatro ítems son dirigidos hacia actividades de ocio digital. Estos ítems consisten en preguntar por las actividades de ocio en línea, tales como videojuegos, escuchar música, ver televisión y leer libros o revistas, a través de la utilización de distintos dispositivos electrónicos (p. ej., notebook, iPad, tablet, smartphone y consola de videojuegos). El formato de respuesta del ítem refiere a la frecuencia con la que se realizaron estas actividades, variando desde la opción “nunca” hasta el número de días en un mes dividido en rangos de 5 días (p. ej., de 1 a 5 días, de 6 a 10 días, etc.).
+
+En cuanto a la socialización, Szabo et al. (2019) utiliza datos del *New Zealand Health, Work, and Retirement Study* y construye un índice de uso de internet para socialización en adultos mayores (el cual es validado utilizando Análisis Factorial Confirmatorio, que señala un ajuste pobre del modelo). El estudio mide este concepto a través de cuatro variables: relación con amigos, relación con familiares, creación de nuevas relaciones con amigos y familiares y compartir fotografías y datos. Todas las variables son medidas a través de escalas Likert de frecuencia, con las categorías (1) Nunca; (2) una vez cada algunos meses; (3) una vez al mes; (4) varias veces al mes; (5) varias veces a la semana y (6) diariamente.
+
+En el contexto nacional, la ENCVV (Centro de Estudios de Vejez y Envejecimiento UC & Caja Los Andes, 2022) aplica un módulo dedicado específicamente a tecnologías, contemplando preguntas sobre uso de dispositivos digitales para ocio y socialización.
+
+Estudios internacionales que contemplan población en la vejez también han medido el uso de tecnologías digitales, como el *Programme for the International Assessment of Adult Competencies* (PIAAC) realizado por la OCDE. Este incluye preguntas sobre uso de tecnología fuera del trabajo, tanto para ocio, como para comunicarse y socializar, con una muestra de treinta países entre los cuales se encuentra Chile (OECD, 2023).
+
+Otros estudios sobre vejez y salud, como el *Health and Retirement Study* o el *English Longitudinal Study of Ageing*, aunque contemplan amplias muestras de adultos mayores con datos panel, solo miden uso a internet de forma dicotómica, impidiendo identificar el ocio y la socialización digital en la población envejecida (Institute for Social Research, 2024; English Longitudinal Study of Ageing, s.f.).}
+
+A continuación, se presenta una tabla de operacionalización de la escala de ocio y socialización digital propuesta.
+
+### Escala de uso de dispositivos digitales para ocio y socialización en adultos mayores
+
++---------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Dimensiones                                             | Indicadores                                                                                                                                                                                  |
++---------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Uso de dispositivos digitales para la socialización** | -   Frecuencia de uso de dispositivos digitales para enviar mensajes de texto a familiares o amigos (A través de plataformas como Whatsapp o Messenger)                                      |
+|                                                         |                                                                                                                                                                                              |
+|                                                         | -   Frecuencia de uso de dispositivos digitales para realizar videollamadas a familiares o amigos (a través de plataformas como Skype, Whatsapp, Zoom o Meet).                               |
+|                                                         |                                                                                                                                                                                              |
+|                                                         | -   Frecuencia de uso de dispositivos digitales para participar en grupos o comunidades de redes sociales (a través de plataformas como Facebook o Whatsapp).                                |
+|                                                         |                                                                                                                                                                                              |
+|                                                         | -   Frecuencia de uso de dispositivos digitales para publicar contenido o interactuar con contenido de otros en redes sociales (a través de plataformas como Facebook, Twitter o Instagram). |
+|                                                         |                                                                                                                                                                                              |
+|                                                         | -   Frecuencia de uso de dispositivos digitales para hacer nuevos amigos o encontrar pareja (a través de plataformas como Facebook, Tinder o Badoo)                                          |
++---------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Uso de dispositivos digitales para el ocio**          | -   Frecuencia de uso de dispositivos digitales para escuchar música (a través de plataformas como Spotify o Apple Music).                                                                   |
+|                                                         |                                                                                                                                                                                              |
+|                                                         | -   Frecuencia de uso de dispositivos digitales para ver videos, series, documentales o películas (a través de plataformas como Youtube, Netflix o Disney +).                                |
+|                                                         |                                                                                                                                                                                              |
+|                                                         | -   Frecuencia de uso de dispositivos digitales para leer libros, revistas o periódicos.                                                                                                     |
+|                                                         |                                                                                                                                                                                              |
+|                                                         | -   Frecuencia de uso de dispositivos digitales para jugar videojuegos.                                                                                                                      |
+|                                                         |                                                                                                                                                                                              |
+|                                                         | -   Frecuencia de uso de dispositivos digitales para ver videos de corta duración (a través de plataformas como Tiktok, Instagram Reels o Youtube Shorts).                                   |
++---------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## **Evaluación de datos disponibles y propuesta de instrumento**
+
+Planteado el constructo teórico, existe la necesidad de medir cada una de estas dimensiones con datos disponibles. Dos estudios son especialmente relevantes. El primero, PIAAC (OECD, 2023), incluye una batería de ítems sobre uso de TIC fuera del trabajo. El encabezado de esta sección es: “Fuera del trabajo. ¿Qué tan frecuentemente usas un computador o un dispositivo digital como una tablet o un smartphone para los siguientes propósitos?” y las categorías de respuesta van de Nunca (1) a Siempre (5). Luego, se presentan una serie de categorías de actividades, con dos que apuntan hacia el ocio y la socialización: comunicarse con otros a través de diferentes medios, y ocio personal (como escuchar música, jugar videojuegos o ver series y películas). Pese a la magnitud de estos datos, caracterizados por un gran muestreo y representatividad en treinta países, tienen dos grandes desventajas en el contexto de este estudio. Primero, la edad máxima de los encuestados es de 65 años, representando sólo a una pequeña porción de los adultos mayores. Segundo, todo el constructo propuesto es medido por dos variables, lo cual no permite capturar la multidimensionalidad de los usos de TIC para el ocio y socialización identificados en la operacionalización del concepto.
+
+Desde el contexto nacional, el estudio ENCVV (Centro de Estudios de Vejez y Envejecimiento UC & Caja Los Andes, 2022) propone un enfoque distinto para medir el uso de TIC en adultos mayores. En su encuesta, incluyen dos preguntas, la primera sobre actividades realizadas a través del uso de un celular inteligente y la segunda desde el internet en general. En la primera, la pregunta corresponde a “Durante el último mes, ¿ha utilizado usted el celular para las siguientes actividades?”, e incluye tareas asociadas al ocio y la socialización, como comunicarse por mensajes o chat, usar redes sociales (como Twitter, Facebook o Instagram), jugar videojuegos y ver videos, series o películas. La segunda pregunta, con el encabezado “Durante el último mes, ¿ha utilizado usted Internet, ya sea a través del celular, computador o tablet, para las siguiente actividades?” Incluye actividades más funcionales, pero también un ítem relacionado con la socialización, sobre videollamadas en medios digitales (como Zoom, Meet o Skype). Pese a la gran cantidad de variables que contempla esta encuesta para medir el uso de TIC para ocio y socialización digital, todas estas se miden de forma dicotómica, permitiendo capturar solo si el encuestado ha realizado la actividad determinada en el último mes o no.
+
+Dadas las limitaciones de ambos estudios disponibles, se propone una forma más precisa de medir los usos de TIC para ocio y socialización en adultos mayores: agregando una mayor cantidad de actividades, como en ENCVV, y, simultáneamente, utilizando escalas Likert de frecuencia, para capturar de mejor manera la variabilidad en los perfiles de uso de TIC para ocio y socialización en la vejez.
+
+Las variables tendrán el siguiente encabezado: “¿Con cuánta frecuencia realiza usted las siguientes actividades a través de dispositivos tecnológicos (como celulares inteligentes, tablets, computadores o laptops). Las categorías de respuesta van desde 1 a 6, donde 1 = Nunca; 2 = Una vez cada varios meses; 3 = Una vez al mes; 4 = Varias veces al mes; 5 = Varias veces a la semana y 6 = Todos los días. 
+
+Las actividades que se consultarán coinciden con los indicadores propuestos anteriormente, para socialización: 1. Enviar mensajes de texto a familiares o amigos (a través de plataformas como Whatsapp o Messenger); 2. Realizar videollamadas a familiares o amigos (a través de plataformas como Skype, Zoom o Meet); 3. Participar en grupos o comunidades de redes sociales (a través de plataformas como Facebook o Whatsapp); 4. Publicar contenido o interactuar con contenido de otros en redes sociales (a través de plataformas como Facebook, Twitter o Instagram); y 5. Hacer nuevos amigos o encontrar pareja (a través de plataformas como Facebook, Tinder o Badoo). Para ocio: 1. Escuchar música (a través de plataformas como Spotify o Apple Music); 2. Ver videos, series, documentales o películas (a través de plataformas como Youtube, Netflix o Disney +); 3. Leer libros, revistas o periódicos; 4. Jugar videojuegos; 5. Ver videos de corta duración (a través de plataformas como Tiktok, Instagram Reels o Youtube Shorts).
+
+## Datos
+
+En el presente estudio, se utilizarán datos de la ENCVV en su última ola (2022), debido a su pertinencia para evaluar el contexto nacional y diversidad de variables a disposición, y las limitaciones para levantar datos en base al instrumento propuesto. Este estudio comprende un diseño metodológico de tipo transversal y probabilístico. La última realización consta de una muestra total de de 1.786 casos, y es representativa de un 86% de la población mayor de Chile. Por otro lado, dentro de los criterios de exclusión muestrales se encuentran las personas mayores institucionalizadas y personas que por limitaciones cognitivas no puedan responder las preguntas (Centro de Estudios de Vejez y Envejecimiento UC & Caja Los Andes, 2022).
+
+A continuación, se presenta la tabla de operacionalización adaptada según los ítems disponibles en la base de datos:
+
+### Escala de uso de dispositivos digitales para ocio y socialización en adultos mayores adaptada
+
++-----------------------------------------------------+------------------------------------+
+| Dimensiones                                         | **Indicadores**                    |
++-----------------------------------------------------+------------------------------------+
+| Uso de dispositivos digitales para la socialización | Hablar con otra persona            |
+|                                                     |                                    |
+|                                                     | Comunicarse por mensajes o chat    |
+|                                                     |                                    |
+|                                                     | Comunicarse por videollamada       |
+|                                                     |                                    |
+|                                                     | Usar Instagram                     |
+|                                                     |                                    |
+|                                                     | Usar Twitter                       |
+|                                                     |                                    |
+|                                                     | Usar Facebook                      |
+|                                                     |                                    |
+|                                                     | Otras redes sociales               |
+|                                                     |                                    |
+|                                                     | Uso de Zoom o Skype                |
++-----------------------------------------------------+------------------------------------+
+| Uso de dispositivos digitales para el ocio          | Leer libros, diarios o revistas    |
+|                                                     |                                    |
+|                                                     | Escuchar música                    |
+|                                                     |                                    |
+|                                                     | ver videos, películas o series     |
+|                                                     |                                    |
+|                                                     | Jugar en el celular                |
+|                                                     |                                    |
+|                                                     | Aprender algo a través de internet |
+|                                                     |                                    |
+|                                                     | Sacar fotos o videos               |
++-----------------------------------------------------+------------------------------------+
+
+### Variables dependientes
+
+Las variables dependientes corresponden a tres instrumentos validados incluidos en la ENCVV. Aunque la base de datos proporciona variables categorizadas según puntos de corte clínicos, este estudio utilizó los índices sumativos construidos a partir de los ítems originales para preservar la escala de medición completa. Para evaluar la sintomatología depresiva se empleó la Escala de Depresión Geriátrica de Yesavage abreviada (GDS-5) (Hoyl et al., 1999), cuyo puntaje aditivo oscila entre 0 y 5. El sentimiento de soledad fue medido con la Escala UCLA abreviada (Hughes et al., 2004), generando un índice acumulativo con un rango de 0 a 6 puntos. Finalmente, para el aislamiento social se utilizó la Escala de Red Social de Lubben (LSNS-6) (Lubben & Gironda, 2003), la cual entrega un puntaje continuo que varía de 0 a 30 puntos e integra ítems sobre redes familiares y de amistad.
+
+### Hipótesis
+
+A partir de las variables disponibles en la base de datos, se plantean las siguientes hipótesis.
+
+$H1=$ Los adultos mayores con un mayor índice de uso de dispositivos digitales para ocio y socialización tendrán una menor puntuación en la escala de soledad abreviada UCLA.
+
+$H2=$ Los adultos mayores con un mayor índice de uso de dispositivos digitales para ocio y socialización tendrán una mayor puntuación en la escala de redes sociales Lubben.
+
+$H3=$ Los adultos mayores con un mayor índice de uso de dispositivos digitales para ocio y socialización tendrán una menor puntuación en la escala de riesgos de síntomas depresivos Yesavage.
+
+## Resultados
+
+### Configuración de la sesión
 
 ```{r}
 install.packages("pacman")
@@ -36,15 +171,13 @@ options(scipen = 999) # Desactivar notación científica
 rm(list = ls()) # Limpiar el entorno de trabajo
 ```
 
-## Cargamos los datos
-
 ```{r}
 
 datos <- haven::read_dta(here::here("input", "TendenciaECV20072022publica.dta"))
 
 ```
 
-## Preprocesamos los datos
+### Preprocesamiento de los datos
 
 ```{r}
 
@@ -106,9 +239,9 @@ datos_proc <- datos_proc |>
 
 ```
 
-## Resultados descriptivos
+### Resultados descriptivos
 
-### Descriptivos de la muestra
+#### Descriptivos de la muestra
 
 ```{r}
 table1(~ SEXO + EDAD + EDUCACION + TECNOLOGIA1 + LUBBENALTO_ + ALONE_ + DEPRESSED_, data = datos_proc, caption = "Descriptivos generales de la muestra", footnote = "Elaboración propia con datos de la ECVV 2022")
@@ -130,9 +263,11 @@ table1(~.,data=items_seleccionados, caption = '"Ha utilizado el celular para..."
 
 ```
 
-Sobre las variables que componen la operacionalización realizada, el uso de celulares más reportado por los individuos es para hablar con otra persona (89.8%), seguido de comunicarse por mensajes o chat en plataformas como Whatsapp (57.3%) y comunicarse por videollamada (49.2%). Facebook es la red social que más utilizan los adultos mayores que componen la muestra (40.8%), con una gran diferencia con la segunda más utilizada que es Instagram (16.1%). Dos de las variables consideradas no se reducen al uso a través del celular, y presentan una menor frecuencia que las demás: Uso de Zoom, Meet o Skype (11.6%) y Aprender algo a través de internet (20.2%).
+Sobre las variables que componen la operacionalización realizada, el uso de celulares más reportado por los individuos es para hablar con otra persona (89.8%), seguido de comunicarse por mensajes o chat en plataformas como WhatsApp (57.3%) y comunicarse por videollamada (49.2%). Facebook es la red social que más utilizan los adultos mayores que componen la muestra (40.8%), con una gran diferencia con la segunda más utilizada que es Instagram (16.1%). Dos de las variables consideradas no se reducen al uso a través del celular, y presentan una menor frecuencia que las demás: Uso de Zoom, Meet o Skype (11.6%) y Aprender algo a través de internet (20.2%).
 
-## Matriz de correlaciones
+### Validación de la escala
+
+#### Matriz de correlaciones
 
 ```{r}
 vars_indice <- c("TECNOLOGIA2_1", "TECNOLOGIA2_3", "TECNOLOGIA2_5", 
@@ -148,7 +283,7 @@ tech_data <- datos |>
          TECNOLOGIA2_13, TECNOLOGIA2_14, TECNOLOGIA2_16, TECNOLOGIA2_15, 
          TECNOLOGIA7_1, TECNOLOGIA7_2) |>
   mutate(across(c(TECNOLOGIA7_1, TECNOLOGIA7_2), ~ na_if(., 3))) |>
-  mutate(across(all_of(vars_indice), ~ 3 - .)) # Se restan los puntajes a 3 para invertir el índice (en el que 1 significa si y 2 significa no)
+  mutate(across(all_of(vars_indice), ~ 2 - .)) # Se restan los puntajes a 2 para invertir el índice (en el que 1 significa si y 2 significa no) y que el puntaje mínimo sea 0
 
 var_label(tech_data) <- list(
   TECNOLOGIA2_1 = "Hablar con otra persona",
@@ -206,7 +341,7 @@ corrplot::corrplot(matCor$rho,
 
 Como primer paso del análisis, se estimó una matriz de correlaciones tetracórica, debido a la naturaleza dicotómica de todas las variables que componen la batería de uso de dispositivos digitales en la ENCVV 2022. Todas las correlaciones son positivas, con una magnitud alta en la mayoría de casos, y moderada en una menor proporción de ítems. El rango de las magnitudes varía entre 0.4 y 0.89, siendo la menor correlación registrada la correspondiente a los ítems de utilización de dispositivos digitales para hablar con otras personas y consumir contenido audiovisual.
 
-## Análisis Factorial Exploratorio
+#### Análisis Factorial Exploratorio
 
 ```{r}
 KMO(matCor$rho)
@@ -214,7 +349,7 @@ KMO(matCor$rho)
 cortest.bartlett(matCor$rho, n = 1789)
 ```
 
-Para analizar si un Análisis Factorial Exploratorio (AFE) es plausible en la muestra, se realizaron dos análisis: el test de KMO y el test de esfericidad de Barlett. El valor KMO de la matriz de correlaciones es "merecedora" (\>0.8), lo cual indica que probablemente los datos sean adecuados para conducir un AFE, coincidente con el resultado significativo del test de esfericidad de Barlett ($\chi^2$=29098; p\<0.001).
+Para analizar si un Análisis Factorial Exploratorio (AFE) es plausible en la muestra, se realizaron dos análisis: el test de KMO y el test de esfericidad de Barlett. El valor KMO de la matriz de correlaciones es satisfactorio (\>0.8), lo cual indica que probablemente los datos sean idóneos para conducir un AFE, coincidente con el resultado significativo del test de esfericidad de Barlett ($\chi^2$=29098; p\<0.001).
 
 ```{r}
 scree.plot(tech_data)
@@ -260,7 +395,7 @@ sjPlot::tab_fa(
 
 ```
 
-Analizando las cargas factoriales, se observa una estructura similar a la proyectada en la operacionalización del concepto. Por el lado del primer factor, se agrupan los ítems relacionados a la socialización, cómo la interacción en redes sociales o la comunicación directa a través de mensajes o videollamadas, por lo que se denomina esta dimension "Uso de dispositivos digitales para socialización". En el segundo factor, se encuentran actividades vinculadas con el ocio y el entretenimiento que pueden ser desarrolladas en solitario, cómo leer libros, escuchar música o ver películas o series, por lo que se denomina esta dimensión "Uso de dispositivos digitales para ocio y entretenimiento". Llamativamente, la variable de videollamadas a través de Zoom o Meet presentó una carga alta en este segundo factor, tal vez por que los encuestados asocian estas plataformas a tareas educativas o informativas, más que a la comunicación interpersonal. Dos ítems presentaron cargas cruzadas de magnitud no ignorable (\<0.3) y una diferencia entre las cargas hacia ambas dimensiones de menos de 0.2: "Jugar en el celular" y "Sacar fotos o videos". Debido a su carácter ambiguo y gracias a disponer de suficientes variables para estimar cada factor, se decide descartar estos ítems de la construcción de los índices y del modelo final.
+Analizando las cargas factoriales, se observa una estructura similar a la proyectada en la operacionalización del concepto. Por el lado del primer factor, se agrupan los ítems relacionados a la socialización, cómo la interacción en redes sociales o la comunicación directa a través de mensajes o videollamadas, por lo que se denomina esta dimensión “Uso de dispositivos digitales para socialización”. En el segundo factor, se encuentran actividades vinculadas con el ocio y el entretenimiento que pueden ser desarrolladas en solitario, cómo leer libros, escuchar música o ver películas o series, por lo que se denomina esta dimensión “Uso de dispositivos digitales para ocio y entretenimiento”. Llamativamente, la variable de videollamadas a través de Zoom o Meet presentó una carga alta en este segundo factor, tal vez porque los encuestados asocian estas plataformas a tareas educativas o informativas, más que a la comunicación interpersonal. Dos ítems presentaron cargas cruzadas de una magnitud que no se puede ignorar (\<0.3), y una diferencia entre las cargas hacia ambas dimensiones de menos de 0.2: “Jugar en el celular” y “Sacar fotos o videos”. Debido a su carácter ambiguo y gracias a disponer de suficientes variables para estimar cada factor, se decide descartar estos ítems de la construcción de los índices y del modelo final.
 
 ```{r}
 tech_data_2 <- tech_data |> select(-TECNOLOGIA2_6, -TECNOLOGIA2_5)
@@ -295,9 +430,9 @@ sjPlot::tab_fa(
 modelo_2f_2
 ```
 
-El ajuste global del modelo fue aceptable. Las cargas factoriales presentaron una magnitud alta, entre 0.7 y 0.98 en la dimensión de Socialización y entre 0.64 y 0.87 en la dimensión de Ocio y Entretenimiento. La comunalidad de los ítems muestra una puntuación adecuada (\>0.5), las cargas factoriales SS indican una buen ajuste a la estructura bidimensional y la varianza total explicada por el modelo es alta, del 71% (41% correspondiente al factor de Socialización y 29% al de Ocio y Entretenimiento). Ambos factores tienen una alta correlación, de 0.78, lo cual sugiere que ambas dimensiones, aunque distinguibles, están fuertemente relacionadas en los sujetos. Esto indica que los adultos mayores que más utilizan los dispositivos digitales para socializar son a su vez los que más lo hacen para entretenerse.
+El ajuste global del modelo fue aceptable. Las cargas factoriales presentaron una magnitud alta, entre 0.69 y 0.98 en la dimensión de Socialización y entre 0.64 y 0.87 en la dimensión de Ocio y Entretenimiento. La comunalidad de los ítems muestra una puntuación adecuada (\>0.5), las cargas factoriales SS indican una buen ajuste a la estructura bidimensional y la varianza total explicada por el modelo es alta, del 71% (41% correspondiente al factor de Socialización y 29% al de Ocio y Entretenimiento). Ambos factores tienen una alta correlación, de 0.78, lo cual sugiere que ambas dimensiones, aunque distinguibles, están fuertemente relacionadas en los sujetos. Esto indica que los adultos mayores que más utilizan los dispositivos digitales para socializar son a su vez los que más lo hacen para entretenerse.
 
-## Análisis de confiabilidad
+#### Análisis de confiabilidad
 
 ```{r}
 
@@ -320,9 +455,11 @@ tabla_conf <- qflextable(confiabilidad) |> theme_vanilla() |> colformat_double(d
 tabla_conf
 ```
 
-Debido a la naturaleza dicotómica de los ítems que componen ambos factores, la consistencia interna de cada subescala se estimó través de Alfa Ordinal y coeficiente omega de McDonald, de forma independiente para cada subescala. Los resultados indicaron niveles de fiabilidad excelentes para ambas dimensiones. El factor de Socialización obtuvo un Alpha Ordinal de 0.95 y un coeficiente omega de McDonald de 0.95, mientras que el factor de Ocio y Entretenimiento presentó un alpha ordinal de 0.91 y un coeficiente omega de McDonald de 0.91. Ambas escalas tienen una alta consistencia interna, con una buena relación entre sus mediciones y los ítems que las componen, por lo que se procederá a la creación de los íncides y los análisis bivariados para comprobar las hipótesis del estudio.
+Debido a la naturaleza dicotómica de los ítems que componen ambos factores, la consistencia interna de cada subescala se estimó través de Alfa Ordinal y coeficiente omega de McDonald, de forma independiente para cada subescala. Los resultados indicaron niveles de fiabilidad excelentes para ambas dimensiones. El factor de Socialización obtuvo un Alpha Ordinal de 0.95 y un coeficiente omega de McDonald de 0.95, mientras que el factor de Ocio y Entretenimiento presentó un Alpha ordinal de 0.91 y un coeficiente omega de McDonald de 0.91. Ambas escalas tienen una alta consistencia interna, con una buena relación entre sus mediciones y los ítems que las componen, por lo que se procederá a la creación de los índices y los análisis bivariados para comprobar las hipótesis del estudio.
 
-## Construcción del índice
+### Resultados bivariados
+
+#### Construcción del índice
 
 ```{r}
 
@@ -339,15 +476,15 @@ vars_indice <- c("TECNOLOGIA2_1", "TECNOLOGIA2_3", "TECNOLOGIA2_7", "TECNOLOGIA2
                  "TECNOLOGIA7_1", "TECNOLOGIA7_2")
 
 datos_biv <- datos |>
-    select(AÑO, SEXO, EDAD, EDUCACION, starts_with("TECNOLOGIA1"), starts_with("TECNOLOGIA2"), TECNOLOGIA7_1, TECNOLOGIA7_2, starts_with("LUBBEN"), starts_with("ALONE"), starts_with("DEPRESS"), -TECNOLOGIA2_4, -TECNOLOGIA2_8, -TECNOLOGIA2_9) |> 
-    filter(AÑO == 2022)
+    select(`AÑO`, SEXO, EDAD, EDUCACION, starts_with("TECNOLOGIA1"), starts_with("TECNOLOGIA2"), TECNOLOGIA7_1, TECNOLOGIA7_2, starts_with("LUBBEN"), starts_with("ALONE"), starts_with("DEPRESS"), -TECNOLOGIA2_4, -TECNOLOGIA2_8, -TECNOLOGIA2_9) |> 
+    filter(`AÑO` == 2022)
 
 datos_biv <- datos_biv |> 
   mutate(TECNOLOGIA1 = na_if(TECNOLOGIA1, 5)) |>
   mutate(across(c(TECNOLOGIA7_1, TECNOLOGIA7_2), ~ na_if(., 3))) |>
-  mutate(across(all_of(vars_indice), ~ 3 - .))  |> # Se restan los puntajes a 3 para invertir el índice (en el que 1 significa si y 2 significa no) 
-  mutate(socializacion = rowMeans(pick(all_of(items_social)), na.rm = TRUE)) |> 
-  mutate(ocio = rowMeans(pick(all_of(items_ocio)), na.rm = TRUE)) |> 
+  mutate(across(all_of(vars_indice), ~ 2 - .))  |> # Se restan los puntajes a 2 para invertir el índice (en el que 1 significa si y 2 significa no) y que 0 sea el puntaje mínimo 
+  mutate(socializacion = rowSums(pick(all_of(items_social)), na.rm = TRUE)) |> 
+  mutate(ocio = rowSums(pick(all_of(items_ocio)), na.rm = TRUE)) |> 
   mutate(SEXO = as_factor(SEXO))
 
 var_label(datos_biv) <- list(socializacion = "Uso de dispositivos digitales para socialización",
@@ -357,9 +494,11 @@ ocio = "Uso de dispositivos digitales para ocio y entretenimiento",
    DEPRESSIVE1_ = "Escala de depresión Yesavage"
 )
 
+sum
+
 ```
 
-Los índices de cada dimensión fueron creados mediante un promedio de todas las variables, utilizando pairwise como método de manejo de casos perdidos para mantener la mayor cantidad de casos. Cabe destacar que todas las variables fueron invertidas para construir el índice, ya que en cada ítem un mayor resultado significaba un menor uso de tecnología (en la batería, 1 significa que si utilizaron un dispositivo digital para esa tarea y 2 que no lo hicieron). Esto se realiza para facilitar la interpretación de los análisis posteriores. La estimación del AFE, Alpha, omega y todos los análisis anteriores también fueron conducidos sobre los ítems previamente invertidos.
+Las escalas de cada dimensión fueron creados mediante la suma simple de todas las variables, utilizando pairwise como método de manejo de casos perdidos. Cabe destacar que todas las variables fueron invertidas, ya que en cada ítem un mayor resultado significaba un menor uso de tecnología (en la batería, 1 significa que si utilizaron un dispositivo digital para esa tarea y 2 que no lo hicieron), y recodificadas para que el valor mínimo fuera 0. Esto se realiza para facilitar la interpretación de los análisis posteriores. La estimación del AFE, Alpha, omega y todos los análisis anteriores también fueron conducidos sobre los ítems previamente invertidos.
 
 ```{r}
 
@@ -367,9 +506,7 @@ table1(~ socializacion + ocio | SEXO, data = datos_biv, caption="Descriptivos í
 
 ```
 
-Como descriptivos generales de los factores, ambos índices tienen un rango de 1 a 2, en donde 1 significa que no utilizan los dispositivos tecnológicos para ninguna de las tareas consultadas y 2 para todas. En el caso del índice de socialización, la media es de 1.39 (D.E. = 0.268), y en el del índice de ocio de 1.21 (D.E. = 0.293). En ambos índices, las mujeres muestran un mejor rendimiento, aventajando a sus pares masculinos en 0.06 puntos en la dimensión de Socialización, y en 0.03 puntos en la dimensión de Ocio y Entretenimiento.
-
-## Análisis bivariado
+Con respecto a los descriptivos generales de los factores, la primera escala tiene un rango de 0 a 7 y la segunda de 0 a 5, en concordancia con la cantidad de variables presente en cada una. En el caso de la dimensión de socialización, la media es de 2.7 (D.E. = 1.88), y en el del índice de ocio de 1.04 (D.E. = 1.46). En ambas escalas, las mujeres muestran un mejor rendimiento, aventajando a sus pares masculinos en 0.15 puntos en la dimensión de Socialización, y en 0.45 puntos en la dimensión de Ocio y Entretenimiento.
 
 ```{r}
 
@@ -382,14 +519,70 @@ model_depresion <- lm(DEPRESSIVE1_ ~ socializacion + ocio + SEXO + EDUCACION + E
 sjPlot::tab_model(model_alone, model_lubben, model_depresion, title = "Regresiones lineales factores y escalas de bienestar en adultos mayores")
 ```
 
-Para estimar los análisis bivariados y comprobar las hipótesis planteadas, se estimaron una serie de modelos de regresión lineal a través de Mínimos Cuadrados Ordinarios. En todos los modelos, se agregaron ambos índices simultáneamente, sumando el sexo, la edad y el nivel educativo de los encuestados como variables de control.
+Para estimar los análisis bivariados y comprobar las hipótesis planteadas, se estimaron una serie de modelos de regresión lineal a través de Mínimos Cuadrados Ordinarios. En todos los modelos, se agregaron ambas escalas simultáneamente, sumando el sexo, la edad y el nivel educativo de los encuestados como variables de control.
 
-El primer modelo, que tiene como variable dependiente la escala UCLA de soledad autopercibida (rango de 0 a 6), no mostró efectos significativos para ninguna de las dimensiones. El nivel de estudios si presenta un efecto significativo (p\<0.001) y negativo en la soledad: El aumento de un nivel educaciónal significa una reducción de 0.19 en la escala de soledad. El sexo tambien mostró un impacto en la soledad (p\<0.01), siendo el efecto de ser mujer un aumento de 0.23 en la escala de soledad. Este modelo es el que explica una menor porción de la varianza entre los tres, con un 2.9% de variabilidad explicada.
+El primer modelo, que tiene como variable dependiente la escala UCLA de soledad autopercibida (rango de 0 a 6), no mostró efectos significativos para ninguna de las dimensiones. El nivel de estudios si presenta un efecto significativo (p\<0.001) y negativo en la soledad: El aumento de un nivel educacional significa una reducción de 0.18 en la escala de soledad. El sexo también mostró un impacto en la soledad (p\<0.01), siendo el efecto de ser mujer un aumento de 0.25 en la escala de soledad. Este modelo es el que explica una menor porción de la varianza entre los tres, con un 2.9% de variabilidad explicada.
 
-El segundo modelo, con la escala de redes sociales de Lubben como variable dependiente (rango de 0 a 30), presenta efectos significativos para ambos factores (p\<=0.001). Sobre la dimensión de socialización, la diferencia entre los sujetos que no utilizan los dispositivos para ninguna estas actividades y los que sí lo hacen es de 3.45 puntos. El impacto del uso de dispositivos digitales para el ocio es algo menor, teniendo un efecto de 1.97 el utilizar dispositivos digitales para el entretenimiento. El R² indica que el modelo está explicando un 9% de la varianza de la variable dependiente.
+El segundo modelo, con la escala de redes sociales de Lubben como variable dependiente (rango de 0 a 30), presenta efectos significativos para ambos factores (p\<=0.001). Sobre la dimensión de socialización, el aumento en un punto en la escala (lo cual significa utilizar los dispositivos para una más de estas tareas) representa un aumento de 0.54 en las redes sociales de los adultos mayores. El impacto del uso de dispositivos digitales para el ocio es algo menor, teniendo un efecto de 0.39 el utilizar dispositivos digitales para el entretenimiento. El R² indica que el modelo está explicando un 9.2% de la varianza de la variable dependiente.
 
-Con respecto al tercer modelo, entre los factores construidos solo la dimensión de socialización tiene un efecto significativo en los síntomas depresivos (p\<0.001). El efecto de utilizar dispositivos digitales para socializar es negativo, reduciendo en 0.79 el puntaje en la escala de depresión de Yesavage (que tiene un rango de 0 a 5). El R² señala que el modelo está explicando un 8.2% de la varianza de la escala de depresión.
+Con respecto al tercer modelo, entre los factores construidos solo la dimensión de socialización tiene un efecto significativo en los síntomas depresivos (p\<0.001). El efecto de utilizar dispositivos digitales para socializar es negativo, reduciendo en 0.11 el puntaje en la escala de depresión de Yesavage (que tiene un rango de 0 a 5) el utilizar los dispositivos digitales para una actividad de socialización adicional. El R² señala que el modelo está explicando un 8.2% de la varianza de la escala de depresión.
 
-En síntesis, el uso de tecnologías digitales para el ocio y la socialización tiene un efecto positivo en diversos indicadores del bienestar en la vejez, controlando por el sexo, la edad y el nivel educacional. Al observar los resultados de los modelos, la socialización demuestra ser más relevante para explicar un menor riesgo de depresión y una mayor red social en los adultos mayores, mientras que no se encontraron resultados significativos para ninguna de las dimensiones en la soledad.
+En síntesis, el uso de tecnologías digitales para el ocio y la socialización tiene un efecto positivo en diversos indicadores del bienestar en la vejez, controlando por el sexo, la edad y el nivel educacional. Al observar los resultados de los modelos, la socialización demuestra ser más relevante para explicar un menor riesgo de depresión y aislamiento social, mientras que no se encontraron resultados significativos para ninguna de las dimensiones en la soledad.
 
-Estos resultados, en concordancia con la literatura revisada, indican que el uso de dispositivos digitales puede servir como herramienta para la población envejecida para comunicarse, entretenerse y conservar sus redes sociales. Cómo se analizó en los modelos de regresión, un mayor uso de dispositivos digitales, en especial en la dimensión de socialización, disminuye en un puntaje considerable los riesgos de síntomas depresivos y aislamiento de los adultos mayores. En el marco de una importante *brecha digital gris*, parece más importante que nunca incentivar un uso positivo de las tecnologías en este grupo para que aprovechen los posibles beneficios que pueden traerles. Para esto, es crucial la elaboración de políticas de capacitación, alfabetización y creación de incentivos, ya que la adaptación es definitivamente un proceso gradual y con múltiples obstáculos, pero que, como sugieren estos resultados, puede traer grandes beneficios personales.
+Estos resultados, en concordancia con la literatura revisada, indican que el uso de dispositivos digitales puede servir como herramienta para la población envejecida para comunicarse, entretenerse y conservar sus redes sociales. Cómo se analizó en los modelos de regresión, un mayor uso de dispositivos digitales, en especial en la dimensión de socialización, disminuye en un puntaje considerable los riesgos de síntomas depresivos y aislamiento de los adultos mayores. En el marco de una importante *grey digital divide*, parece más importante que nunca incentivar un uso positivo de las tecnologías en este grupo para que aprovechen los posibles beneficios que pueden traerles. Para esto, es crucial la elaboración de políticas de capacitación, alfabetización y creación de incentivos, ya que la adaptación es definitivamente un proceso gradual y con múltiples obstáculos, pero que, como sugieren estos resultados, puede traer grandes beneficios personales.
+
+## **Referencias**
+
+Barreda, M., Cantarero-Prieto, D., & Pascual, M. (2024). Age, Technology, and the Digital Divide: Are They Directly Related to Mental Health Problems?  Healthcare, 12(23), 2454. <https://doi.org/10.3390/healthcare12232454>
+
+Castells, M. (1997). La era de la información. Economía, sociedad y cultura, 1. Alianza.
+
+Centro de Estudios de Vejez y Envejecimiento UC, & Caja Los Andes. (2022). Sexta Encuesta Nacional de Calidad de Vida en la Vejez.[ https://encuestacalidaddevidaenlavejez.uc.cl](https://encuestacalidaddevidaenlavejez.uc.cl)
+
+English Longitudinal Study of Ageing. (s.f.). The data we collect. Extraído el 8 de octubre de 2025 de[ https://www.elsa-project.ac.uk/the-data-we-collect](https://www.elsa-project.ac.uk/the-data-we-collect)
+
+Forsman, A. K., & Nordmyr, J. (2017). Psychosocial links between Internet use and mental health in later life: A systematic review of quantitative and qualitative evidence. Journal of Applied Gerontology, 36(12), 1471–1518. doi:10.1177/0733464815595509 
+
+Hoyl, M., Alessi, C., Harker, J., Josephson, K., Pietruszka, F., Koelfgen, M., & al., et. (1999). Development and testing of a five-item version of the Geriatric Depression Scale. Journal of the American Geriatrics Society, 47(7), 873–878. 
+
+Hughes, M. E., Waite, L. J., Hawkley, L. C., & Cacioppo, J. T. (2004). A short scale for measuring loneliness in large surveys: Results from two population-based studies. Research on Aging, 26(6), 655–672. 
+
+Ihm, J., y Hsieh, Y. P. (2015). The implications of information and communication technology use for the social well-being of older adults. Information, Communication & Society, 18(10), 1123–1138. doi:10.1080/1369118x.2015.1019912
+
+Institute for Social Research. (2024). Health and Retirement Study: Internet Use Questionnaire, Wave 2024 \[Cuestionario\]. University of Michigan.[ ](https://hrs.isr.umich.edu/documentation/questionnaires)<https://hrs.isr.umich.edu/sites/default/files/meta/2024/core/qnaire/27hr24EOI.pdf>
+
+Instituto Nacional de Estadística. (2025). Resultados Censo 2024. <https://censo2024.ine.gob.cl/resultados/> 
+
+Jun, H. J., y Kim, M. Y. (2017). What accounts for the relationship between Internet use and suicidal ideation of Korean older adults? A mediation analysis. The Journals of Gerontology, Series B: Psychological Sciences and Social Sciences, 72(5), 846– 855. doi:10.1093/geronb/gbw163 
+
+Kaye, L. (2021). Exploring the “socialness” of social media. Computers in Human Behavior Reports,3. Elsevier Ltd. <https://doi.org/10.1016/j.chbr.2021.100083> 
+
+Ley Nº 19.828 de 2002. Crea el servicio nacional del adulto mayor. 16 de septiembre del 2002. D.O. No 37.369.
+
+Lifshitz, R., Nimrod, G., y Bachner, Y. G. (2018). Internet use and well-being in later life: A functional approach. Aging and Mental Health, 22(1), 85–91. <https://doi.org/10.1080/13607863.2016.1232370> 
+
+Lubben, J., & Gironda, M. (2003). Centrality of social ties to the health and well-being of older adults. Social Work and Health Care in an Aging Society, 319–350.
+
+Mubarak, F., & Suomi, R. (2022). Elderly Forgotten? Digital Exclusion in the Information Age and the Rising Grey Digital Divide. INQUIRY: The Journal of Health Care Organization, Provision, and Financing, 59. <https://doi.org/10.1177/00469580221096272>
+
+Organización Mundial de la Salud (1 de octubre de 2025). Envejecimiento y Salud. Organización Mundial de la Salud. <https://www.who.int/es/news-room/fact-sheets/detail/ageing-and-health> 
+
+OECD. (2023). Survey of Adult Skills (PIAAC) 2023: Master Questionnaire \[Cuestionario\]. OECD Publishing. <https://www.oecd.org/en/data/datasets/piaac-2nd-cycle-database.html>
+
+Rosell, J., Vergés, A. (2021). The Impact of Ageism on the E-Leisure of Older People in Chile. En: Gao, Q., Zhou, J. (eds) Human Aspects of IT for the Aged Population. Technology Design and Acceptance. HCII 2021. Lecture Notes in Computer Science, 12786. Springer, Cham. <https://doi.org/10.1007/978-3-030-78108-8_17> 
+
+Rosell, J., Sepúlveda, S. y Bustamante, F. (2024). Educational Gerontechnology: Toward a Comprehensive Model for the Education of Digital Technologies for Older Adults. En: Gao, Q., Zhou, J. (eds) Human Aspects of IT for the Aged Population. HCII 2024. Lecture Notes in Computer Science, (1)14725 <https://link.springer.com/chapter/10.1007/978-3-031-61543-6_20>
+
+Subsecretaría de Telecomunicaciones y CADEM. (2024). Estudio Undécima Encuesta sobre acceso, usos y usuarios de Internet en Chile \[PDF\]. SUBTEL.[ https://www.subtel.gob.cl/wp-content/uploads/2025/02/Informe-Final-Subtel-Acceso-y-Uso-Internet-2024.pdf](https://www.subtel.gob.cl/wp-content/uploads/2025/02/Informe-Final-Subtel-Acceso-y-Uso-Internet-2024.pdf?utm_source=chatgpt.com)
+
+Sims, T., Reed, A. E., & Carr, D. C. (2017). Information and Communication Technology Use Is Related to Higher Well-Being Among the Oldest-Old. The Journals of Gerontology. Series B, Psychological Sciences and Social Sciences, 72(5), 761-770.[ https://doi.org/10.1093/geronb/gbw130](https://doi.org/10.1093/geronb/gbw130)
+
+Stafford, T.F., Stafford, M.R. and Schkade, L.L. (2004). Determining Uses and Gratifications for the Internet. Decision Sciences, 35: 259-288. <https://doi.org/10.1111/j.00117315.2004.02524.x> 
+
+Szabo, A., Allen, J., Stephens, C., & Alpass, F. (2019). Longitudinal Analysis of the Relationship Between Purposes of Internet Use and Well-being Among Older Adults. The Gerontologist, 59(1), 58–68. <https://doi.org/10.1093/geront/gny036> 
+
+Wang, Y., Zhang, H., Feng, T., & Wang, H. (2019). Does Internet use affect levels of depression among older adults in China? A propensity score matching approach. BMC Public Health, 19(1), 1474. doi:10.1186/s12889-019-7832-8 
+
+Van Dijk, J. (2020). The Digital Divide. Cambridge, UK: Polity Press.
+
+Van Dijk, J. (2020). The Network Society. 1-384.
